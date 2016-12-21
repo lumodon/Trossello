@@ -139,9 +139,9 @@ class SearchResultModal extends Component {
   }
 
   closeIfUserClickedElsewhere(event){
-    const container = ReactDOM.findDOMNode(this.refs.window)
     debugger
     // BUG TODO NOTE: Currently working here. Debugger shows that container is NOT what this person thought event.target would be.
+    const container = ReactDOM.findDOMNode(this.refs.window)
     if (!container.contains(event.target) && container !== event.target) {
       this.props.onClose()
     }
