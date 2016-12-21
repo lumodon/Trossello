@@ -44,6 +44,7 @@ export default class CardSearchForm extends Component {
     if (event.key === '/' &&
     event.target !== this.refs.content &&
     !currentlyInTextArea ){
+      event.preventDefault()
       this.refs.content.focus()
     }
   }
