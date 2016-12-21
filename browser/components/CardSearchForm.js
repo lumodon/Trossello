@@ -40,7 +40,10 @@ export default class CardSearchForm extends Component {
   }
 
   focusOnSlash(event){
-    if (event.key === '/' && event.target !== this.refs.content){
+    const currentlyInTextArea = /HTMLTextAreaElement/.test(String(event.target))
+    if (event.key === '/' &&
+    event.target !== this.refs.content &&
+    !currentlyInTextArea ){
       this.refs.content.focus()
     }
   }
